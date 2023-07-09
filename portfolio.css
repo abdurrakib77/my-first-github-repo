@@ -65,9 +65,9 @@ nav a {
 /* header related styles */
 .header {
     background-color: #FFF8F3;
-    background-image: url(header_bg.png);
+    background-image: url(header_bg.png),url('developer.png');
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: bottom right, top left;
 }
 
 .banner {
@@ -192,7 +192,7 @@ footer{
 .social-links a{
     margin-right: 25px;
 }
-.contact input [type="text"], .contact input[input="email"], textarea{
+.contact input [type="text"], .contact input[input="email"], textarea {
     display: block;
     margin-bottom: 25px;
     padding: 18px 35px;
