@@ -50,6 +50,7 @@ nav {
 
 nav>ul {
     display: flex;
+    align-items: center;
 }
 
 nav li {
@@ -65,7 +66,7 @@ nav a {
 /* header related styles */
 .header {
     background-color: #FFF8F3;
-    background-image: url(header_bg.png),url('developer.png');
+    background-image: url(header_bg.png), url('developer.png');
     background-repeat: no-repeat;
     background-position: bottom right, top left;
 }
@@ -174,25 +175,36 @@ main {
 .resume-item-description {
     color: #757575;
 }
-.download-cv{
+
+.resume-container hr {
+    margin: 30px;
+}
+
+.download-cv {
     text-align: center;
     margin-top: 50px;
 }
+
 /* footer style */
-footer{
+footer {
     display: flex;
-    gap: 100px ;
+    gap: 100px;
     background: #FFF8F3;
     margin-top: 100px;
-    padding: 130px 200px ;
+    padding: 130px 200px;
 }
-.footer-column{
+
+.footer-column {
     width: 50%;
 }
-.social-links a{
+
+.social-links a {
     margin-right: 25px;
 }
-.contact input [type="text"], .contact input[input="email"], textarea {
+
+.contact input[type="text"],
+.contact input[type="email"],
+textarea {
     display: block;
     margin-bottom: 25px;
     padding: 18px 35px;
@@ -201,5 +213,64 @@ footer{
     background: #FFF;
     border: 0;
     width: 100%;
+}
 
+/* responsive styles */
+
+/* mobile devices */
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 576px) {
+    .header {
+        background-image: none;
+    }
+
+    nav, nav > ul,
+    .banner,
+    .skills-container,
+    .resume-container,
+    .about-info-container,
+    footer {
+        flex-direction: column;
+    }
+    nav > ul {
+        gap: 10px;
+    }
+    .banner .profile-pic{
+        width: 100%;
+    }
+    .banner,
+
+    #What-i-do-description {
+        padding: 20px;
+    }
+
+    footer,
+    .about {
+        padding: 10px;
+    }
+    .btn-primary{
+        margin-bottom: 15px;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+
+    .contact input[type="text"],
+    .contact input[type="email"],
+    textarea {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 960px) {
+    footer{
+        padding: 30px;
+    }
+    .btn-primary{
+        margin-bottom: 15px;
+    }
 }
